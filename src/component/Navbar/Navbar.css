@@ -1,0 +1,91 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the navbar */
+.navbar {
+    background-color: #333;
+    /* Dark background for navbar */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo style */
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f39c12;
+    /* Change color on hover */
+}
+
+/* Add a border-bottom to the active item */
+.nav-item.active {
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Add a hamburger icon for mobile */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    /* Show the nav links when hamburger is clicked */
+    .hamburger.active+.nav-links {
+        display: block;
+    }
+}

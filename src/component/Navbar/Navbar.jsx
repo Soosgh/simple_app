@@ -1,12 +1,28 @@
-export function Navbar({ setSelectedCategory }) {
+import React from "react";
+import "./Navbar.css"; // Import external CSS file
+
+const Navbar = () => {
     return (
-        <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-            <div className="text-2xl font-bold">MyShop</div>
-            <div className="space-x-4">
-                <button onClick={() => setSelectedCategory(null)} className="hover:underline">Home</button>
-                <button className="hover:underline">Products</button>
-                <button className="hover:underline">Create</button>
+        <nav className="navbar">
+            <div className="container">
+                {/* Logo */}
+                <div className="logo">Alibaba</div>
+
+                {/* Navigation Links */}
+                <ul className="nav-links">
+                    <li>
+                        <a href="#" className="nav-item">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" className="nav-item">Categories</a>
+                    </li>
+                    <li>
+                        <a href="#" className="nav-item">Create Product</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     );
-}
+};
+
+export default Navbar;
